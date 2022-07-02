@@ -1,0 +1,24 @@
+{% extends "padre.html" %}
+
+{%  load static %}
+
+
+{% block contenido %}
+    <form action="upload" method="POST">
+        {% csrf_token %}
+        <p>Nombre:</p>
+        <input type="text" name="nombre" required>
+        <p>Apellido:</p>
+        <input type="text" name="apellido" required>
+        <p>Profesión:</p>
+        <input type="text" name="profesion" required>
+   
+
+        <input type="submit" value="Enviar">
+
+
+    </form>
+
+
+{% endblock %}
+
